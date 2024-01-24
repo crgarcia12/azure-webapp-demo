@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Information</title>
+    <style>
+        /* Add any custom styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Request Information v3</h1>
+    <h2>Request Headers:</h2>
+    <pre id="headers"></pre>
+    <h2>Environment Variables:</h2>
+    <pre id="envVariables"></pre>
+    <script>
+        // Function to format JSON and display in HTML
+        function displayRequestInfo() {
+            var headers = {{ headers | tojson | safe }};
+            var envVariables = {{ env_variables | tojson | safe }};
+            document.getElementById('headers').textContent = JSON.stringify(headers, null, 2);
+            document.getElementById('envVariables').textContent = JSON.stringify(envVariables, null, 2);
+        }
+
+        // Call the function on page load
+        window.onload = displayRequestInfo;
+    </script>
+    </body>
+    </html>
