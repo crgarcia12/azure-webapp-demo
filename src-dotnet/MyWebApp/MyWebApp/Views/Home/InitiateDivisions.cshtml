@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Divisions calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This page will call the backend to do some divisions</p>
+<p>It will divide 78 by 10, 9, 8, 7 ...</p>
+
+<p>Here are the results</p>
+
+
+@foreach(string calculation in (List<string>)@ViewData["calculations"])
+{
+    <p>@calculation</p>
+}

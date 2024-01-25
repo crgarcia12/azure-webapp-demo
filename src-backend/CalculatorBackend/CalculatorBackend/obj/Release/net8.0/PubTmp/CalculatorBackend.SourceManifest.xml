@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\gitrepos\github\crgarcia12\azure-webapp-demo\src-backend\CalculatorBackend\CalculatorBackend\obj\Release\net8.0\PubTmp\Out\" />
+</sitemanifest>

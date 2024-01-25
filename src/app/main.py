@@ -36,7 +36,7 @@ def get_headers(request: Request):
     )
 
 @app.get("/People")
-def get_headers(request: Request):
+def get_people(request: Request):
     endpoint = os.getenv('AZURE_COSMOS_RESOURCEENDPOINT')
     listConnectionStringUrl = os.getenv('AZURE_COSMOS_LISTCONNECTIONSTRINGURL')
     scope = os.getenv('AZURE_COSMOS_SCOPE')
